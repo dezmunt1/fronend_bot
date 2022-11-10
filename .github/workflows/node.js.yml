@@ -26,4 +26,5 @@ jobs:
     - name: Start App
       env:
         BOT_TOKEN: ${{ secrets.SECRET_FRONEND_BOT_TOKEN }}
+        MEME_API: ${{ secrets.SECRET_MEME_API }}
       run: pm2 delete -s fronend_bot || :; pm2 start npm --name "fronend_bot" -- start; pm2 save
