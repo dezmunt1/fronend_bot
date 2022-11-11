@@ -36,7 +36,7 @@ export const cifrusParser = async () => {
           .querySelector('.price .price-new')
           ?.textContent?.trim();
 
-        if (!name || !/Pixel 7/.test(name)) return;
+        if (!name || !/Pixel 7/.test(name) || /Japan/.test(name)) return;
         mapObj[name] = price ?? '';
       });
       cache.message = Object.entries(mapObj).reduce(
