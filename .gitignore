@@ -1,6 +1,8 @@
 /build
 /node_modules
 
+session.json
+
 .env.development
 .env.production
 
